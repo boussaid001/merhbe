@@ -156,15 +156,6 @@ const LandingPage: React.FC = () => {
                     <ButtonIcon>💬</ButtonIcon>
                     Text Chat
                   </TextChatButton>
-                  
-                  <VideoChatButton
-                    onClick={() => navigate('/video-chat')}
-                    whileHover={{ scale: 1.05, boxShadow: '0 8px 15px rgba(231, 0, 19, 0.3)' }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    <ButtonIcon>🎥</ButtonIcon>
-                    Video Chat
-                  </VideoChatButton>
                 </ActionButtons>
                 
                 <StatsBar
@@ -173,17 +164,17 @@ const LandingPage: React.FC = () => {
                   transition={{ delay: 0.9, duration: 0.6 }}
                 >
                   <StatItem>
-                    <StatValue>10,000+</StatValue>
+                    <StatValue>10+</StatValue>
                     <StatLabel>Daily Users</StatLabel>
                   </StatItem>
                   <StatDivider />
                   <StatItem>
-                    <StatValue>5M+</StatValue>
+                    <StatValue>100+</StatValue>
                     <StatLabel>Chats</StatLabel>
                   </StatItem>
                   <StatDivider />
                   <StatItem>
-                    <StatValue>100+</StatValue>
+                    <StatValue>3+</StatValue>
                     <StatLabel>Countries</StatLabel>
                   </StatItem>
                 </StatsBar>
