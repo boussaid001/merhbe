@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 
 // High-quality images from CDN
 const BACKGROUND_PATTERN = "https://res.cloudinary.com/dxzitrwr1/image/upload/v1695341082/pattern_background_dark_xoq3si.svg";
-const HERO_IMAGE = "https://images.unsplash.com/photo-1515187029135-18ee286d815b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80";
+const HERO_IMAGE = "https://images.pexels.com/photos/7709086/pexels-photo-7709086.jpeg";
 const TUNISIA_FLAG = "https://flagcdn.com/w80/tn.png";
 const LOGO_ICON = "https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f4ac.svg";
 const USERS_IMAGES = [
