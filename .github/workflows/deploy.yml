@@ -1,0 +1,30 @@
+name: Deploy to VPS
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup SSH
+        uses: webfactory/ssh-agent@v0.8.0
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+      - name: Add host key
+        run: |
+          mkdir -p ~/.ssh
+          ssh-keyscan -H 4.178.188.9 >> ~/.ssh/known_hosts
+
+      - name: Deploy to VPS
+        run: |
+          ssh amine@4.178.188.9 'cd ~/website && git pull origin main'
+          ssh amine@4.178.188.9 'cd ~/website/video-chat-app && npm install --legacy-peer-deps && npm run build'
+          ssh amine@4.178.188.9 'cd ~/website/backend && npm install'
+          ssh amine@4.178.188.9 'pm2 restart backend || cd ~/website/backend && pm2 start npm --name "backend" -- run dev'
+          ssh amine@4.178.188.9 'sudo systemctl restart nginx' 
