@@ -76,6 +76,17 @@ The application should now be running at:
 - Frontend: http://localhost:3000
 - Backend API: http://localhost:4000
 
+## Docker Support
+
+The application includes Docker support for PostgreSQL and Redis services. To start these services:
+
+```bash
+cd backend
+docker compose up -d
+```
+
+This will start PostgreSQL on port 5434 and Redis on port 6380.
+
 ## Accessing on Local Network
 
 The application is configured to be accessible from other devices on your local network:
